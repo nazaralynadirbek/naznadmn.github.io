@@ -1,7 +1,5 @@
 <template lang="pug">
     .views__base
-        Notifications
-
         Header
 
         .content
@@ -15,16 +13,12 @@
     import Header from '@/components/Header.vue'
     import Footer from '@/components/Footer.vue'
 
-    import Notifications from '@/components/Notifications.vue'
-
     export default {
         name: 'App',
 
         components: {
             Header,
-            Footer,
-
-            Notifications
+            Footer
         }
     }
 </script>

@@ -5,9 +5,9 @@
                 .row
                     h2 Let's stay in touch
                     span Get updates on specials and more
-                .row
+                .row(:class='{ error: status === \'STATUS_ERROR\', success: status === \'STATUS_SUCCESS\', loading: status === \'STATUS_LOADING\' }')
                     .col.col-2
-                        input(placeholder='example@example.com', v-model='email')
+                        input(placeholder='example@example.com', v-model='email', v-on:focus='onFocus')
                     .col.col-2
                         button(type='button', v-on:click='onSubscribe') Subscribe now
 </template>
@@ -18,13 +18,39 @@
 
         data() {
             return {
-                email: null
+                email  : null,
+
+                status : 'STATUS_DEFAULT'
             }
         },
 
         methods: {
             onSubscribe() {
-                
+                if (!this.email || (this.email && !this.email.match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/))) {
+                    this.status = 'STATUS_ERROR';
+
+                    window.blur();
+                    
+                    return;
+                }
+
+                // Send Email via EmailJS
+                this.status = 'STATUS_LOADING';
+
+                window.emailjs.send(
+                    'gmail',
+                    'new-subscriber',
+                    {
+                        email: this.email
+                    }
+                ).then(() => {
+                    this.status = 'STATUS_SUCCESS';
+                }).catch(() => {
+                    this.status = 'STATUS_ERROR';
+                })
+            },
+            onFocus() {
+                this.status = 'STATUS_DEFAULT';
             }
         }
     }
@@ -58,6 +84,22 @@
                     margin: 0 auto
                     max-width: 600px
                     border: 1px solid #dcdcdc
+
+                    &.error
+                        border-color: #ef6b6b
+
+                        button
+                            background-color: #ef6b6b
+                    &.success
+                        border-color: #95d2b0
+
+                        button
+                            background-color: #95d2b0
+                    &.loading
+                        border-color: #d2d095
+
+                        button
+                            background-color: #d2d095   
 
                     input,
                     button
