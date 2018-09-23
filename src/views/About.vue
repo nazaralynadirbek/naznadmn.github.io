@@ -16,127 +16,20 @@
                 .row
                     h2 Our team Members
                 .row
-                    .row
-                        .col.col-2
+                    .row(v-for='membersRow in members')
+                        .col.col-2(v-for='membersCell in membersRow')
                             .row
                                 .col.col-2
-                                    img(src='/static/images/team/01.png')
+                                    img(:src='membersCell.preview')
                                 .col.col-2
-                                    h3 Alyona Tkachenko
-                                    span CEO
+                                    h3 {{ membersCell.name }}
+                                    span {{ membersCell.position }}
 
-                                    p
-                                        | 7+ years of experience in corporate
-                                        | segment, with focus on eCom/digital.
-                                        | Works on popularizing of STEM among
-                                        | women. Marketing and business
-                                        | development expertise
+                                    p {{ membersCell.description }}
 
                                     ul.list
-                                        li: a(href='https://www.facebook.com/tkachenko.alyona', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/alyonatkachenko/', target='_blank'): i(class='fab fa-linkedin')
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/02.png')
-                                .col.col-2
-                                    h3 Kairat Akhmetov
-                                    span CTO
-
-                                    p
-                                        | MIPT graduate, 15+ years in ICT
-                                        | industry, started first company 12 years
-                                        | ago, now leading KZ smart-city company,
-                                        | 100+ staff. Telecom, hardware and
-                                        | software expertise
-
-                                    ul.list
-                                        li: a(href='https://www.facebook.com/kayrat.ahmetov', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/kairatakhmetov/', target='_blank'): i(class='fab fa-linkedin')
-                    .row
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/03.png')
-                                .col.col-2
-                                    h3 Nazym Skakova
-                                    span Strategic Partnership Lead
-
-                                    p
-                                        | Degree in IT, additional certification at
-                                        | Malaysia Multimedia University. Manages
-                                        | corporate (some are Forbes 500) clients
-                                        | within multiple CIS countries
-
-                                    ul.list
-                                        li: a(href='https://www.facebook.com/nazym.skakova', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/nazym-skakova-9115a3ab/', target='_blank'): i(class='fab fa-linkedin')
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/04.png')
-                                .col.col-2
-                                    h3 Aituar Atabekov
-                                    span Technical director
-
-                                    p
-                                        | Interested in hardware from 6 years old.
-                                        | FInalist of international math/robotics
-                                        | competition in Sweden. Degree in
-                                        | IT & Certificate at Korean UNIST with the
-                                        | focus on architecture and hardware
-
-                                    ul.list
-                                        li: a(href='https://www.facebook.com/aituarr', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/aituar-atabekov-b346508b/', target='_blank'): i(class='fab fa-linkedin')
-                    .row
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/05.png')
-                                .col.col-2
-                                    h3 Yernur Kenzhebayev
-                                    span Hardware engineer
-
-                                    p
-                                        | Finalist of international computer project
-                                        | competition.Interested in IoT and
-                                        | Hardware from 17 years old. Information
-                                        | Technology Degree.
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/06.png')
-                                .col.col-2
-                                    h3 Dana Malayeva
-                                    span PR & Communication
-
-                                    p
-                                        | Degree in IT, winner of a number of
-                                        | international projects on robotics and
-                                        | space research. Projects coordination
-                                        | at Forbes Kazakhstan experience
-
-                                    ul.list
-                                        li: a(href='https://www.facebook.com/dana.malayeva', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/dana-malayeva-1ba7b9113/', target='_blank'): i(class='fab fa-linkedin')
-                    .row
-                        .col.col-2
-                            .row
-                                .col.col-2
-                                    img(src='/static/images/team/07.png')
-                                .col.col-2
-                                    h3 Diana Kozhakhmet
-                                    span Customer experience manager
-
-                                    p
-                                        | Degree in Literature and Linguistics,
-                                        | additional certificate from University of
-                                        | Malaya (Malaysia)
-
-                                    ul.list
-                                        li: a(href='https://www.facebook.com/di.kozhakhmet', target='_blank'): i(class='fab fa-facebook')
-                                        li: a(href='https://www.linkedin.com/in/ACoAACd5T9UBTIrGEGJ6jVZDRQ17cL_JW3aKRGI/', target='_blank'): i(class='fab fa-linkedin')
+                                        li(v-for='social in membersCell.social')
+                                            a(:href='social.url', target='_blank'): i(:class='social.class')
         .row
             Subscribe
 </template>
@@ -144,8 +37,17 @@
 <script>
     import Subscribe from '@/components/Subscribe.vue'
 
+    // Data
+    import Members from '../../static/json/members.json';
+
     export default {
         name: 'About',
+
+        data() {
+            return {
+                members: Members.members
+            }
+        },
 
         components: {
             Subscribe

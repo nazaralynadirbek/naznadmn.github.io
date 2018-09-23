@@ -45,7 +45,6 @@
                 text-align: center
                 background-repeat: no-repeat
                 background-position: center center
-                border-top: 1px solid rgba(255, 255, 255, .05)
                 background-image: url('/static/images/visuals/partner.jpg')
 
                 .container

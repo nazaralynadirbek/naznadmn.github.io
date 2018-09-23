@@ -7,14 +7,26 @@
                     span Get updates on specials and more
                 .row
                     .col.col-2
-                        input(placeholder='example@example.com')
+                        input(placeholder='example@example.com', v-model='email')
                     .col.col-2
-                        button(type='button') Subscribe now
+                        button(type='button', v-on:click='onSubscribe') Subscribe now
 </template>
 
 <script>
     export default {
-        name: 'Subscribe'
+        name: 'Subscribe',
+
+        data() {
+            return {
+                email: null
+            }
+        },
+
+        methods: {
+            onSubscribe() {
+                
+            }
+        }
     }
 </script>
 

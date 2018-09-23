@@ -1,0 +1,79 @@
+{
+    "members": [
+        [{
+            "preview": "/static/images/team/01.png",
+            "name": "Alyona Tkachenko",
+            "position": "CEO",
+            "description": "7+ years of experience in corporate segment, with focus on eCom/digital. Works on popularizing of STEM among women. Marketing and business development expertise",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.facebook.com/tkachenko.alyona"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/in/alyonatkachenko/"
+            }]
+        }, {
+            "preview": "/static/images/team/02.png",
+            "name": "Kairat Akhmetov",
+            "position": "CTO",
+            "description": "MIPT graduate, 15+ years in ICT industry, started first company 12 years ago, now leading KZ smart-city company, 100+ staff. Telecom, hardware and software expertise",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.facebook.com/kayrat.ahmetov"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/in/kairatakhmetov/"
+            }]
+        }],
+        [{
+            "preview": "/static/images/team/04.png",
+            "name": "Aituar Atabekov",
+            "position": "Technical director",
+            "description": "Interested in hardware from 6 years old. FInalist of international math/robotics competition in Sweden. Degree in IT & Certificate at Korean UNIST with the focus on architecture and hardware",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.facebook.com/aituarr"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/in/aituar-atabekov-b346508b/"
+            }]
+        }, {
+            "preview": "/static/images/team/03.png",
+            "name": "Nazym Skakova",
+            "position": "Strategic Partnership Lead",
+            "description": "Degree in IT, additional certification at Malaysia Multimedia University. Manages corporate (some are Forbes 500) clients within multiple CIS countries",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.facebook.com/nazym.skakova"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "http://www.linkedin.com/in/nazym-skakova"
+            }]
+        }],
+        [{
+            "preview": "/static/images/team/05.png",
+            "name": "Dana Malayeva",
+            "position": "PR & Communication",
+            "description": "Degree in IT, winner of a number of international projects on robotics and space research. Projects coordination experience",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.linkedin.com/in/malayeva/"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "https://www.facebook.com/dana.malayeva"
+            }]
+        }, {
+            "preview": "/static/images/team/06.png",
+            "name": "Diana Kozhakhmet",
+            "position": "Partnerships Manager",
+            "description": "Degree in Literature and Linguistics, additional certificate from University of Malaya (Malaysia)",
+            "social": [{
+                "class": "fab fa-facebook",
+                "url": "https://www.facebook.com/di.kozhakhmet"
+            }, {
+                "class": "fab fa-linkedin",
+                "url": "https://www.linkedin.com/in/dianakozhakhmet"
+            }]
+        }]
+    ]
+}
