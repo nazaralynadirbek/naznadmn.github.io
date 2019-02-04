@@ -1,83 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Nommi - 4G Hotspot with Unlimited Wi-Fi Worldwide.</title>
+    <title></title>
 
     <!-- Meta -->
     <meta charset="utf-8" />
-    <meta name="title" content="Nommi - 4G Hotspot with Unlimited Wi-Fi Worldwide.">
-    <meta name="keywords" content="Купить роутер, buy travel hotspot, travel gadget, buy travel sim-card, unlimited wifi, hotspot">
-    <meta name="description" content="Meet Nommi. 4G Hotspot with Unlimited Wi-Fi Worldwide. Virtual sim. Removes the need to buy a local SIM in every country you visit or expensive data roaming.">
 
-    <!-- Favicon -->
-    <link rel="icon" href="/static/images/icons/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/static/images/icons/favicon.ico" type="image/x-icon">
-
-    <!-- Google -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122818732-1"></script>
-
-    <!-- Yandex -->
-    <script type="text/javascript" >
-        (function (d, w, c) {
-            (w[c] = w[c] || []).push(function() {
-                try {
-                    w.yaCounter49727398 = new Ya.Metrika2({
-                        id:49727398,
-                        clickmap:true,
-                        trackLinks:true,
-                        accurateTrackBounce:true,
-                        webvisor:true
-                    });
-                } catch(e) { }
-            });
-
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script"),
-                f = function () { n.parentNode.insertBefore(s, n); };
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://mc.yandex.ru/metrika/tag.js";
-
-            if (w.opera == "[object Opera]") {
-                d.addEventListener("DOMContentLoaded", f, false);
-            } else { f(); }
-        })(document, window, "yandex_metrika_callbacks2");
-    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
     <!-- Styles -->
-    <!-- Would be injected automatically -->
+    <style>
+        html, body, img, h1, h2, h3, h4, h5, h6, ul, li, a, p {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            color: #FFF;
+            padding: 100px 200px;
+            box-sizing: border-box;
+            background-color: #FFF;
+            font-family: 'Amatic SC', sans-serif;
+
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #FF7575;
+        }
+
+        .overlay,
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            font-size: 124px;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        span {
+            opacity: .8;
+            font-size: 36px;
+            justify-self: flex-end;
+        }
+
+        .content {
+            display: none;
+            font-size: 72px;
+        }
+        .content span {
+            font-size: 18px;
+        }
+
+        @media print {
+            .content {
+                display: flex;
+            }
+            .overlay {
+                display: none;
+            }
+            body {
+                padding: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Google -->
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-122818732-1');
-    </script>
-
-    <!-- Yandex -->
-    <noscript>
-        <div>
-            <img src="https://mc.yandex.ru/watch/49727398" style="position:absolute; left:-9999px;" alt="" />
+    <div class="container">
+        <div class="overlay">
+            <p>Something</p>
+            <span>"You're almost there." - цитаты онлайн точка ру</span>
         </div>
-    </noscript>
-
-    <!-- Application -->
-    <div id="app">
+        <div class="content">
+            <p>ул.Куйбышева 44</p>
+            <span>"Двигаться надо - двигаться надо"</span>
+        </div>
     </div>
-
-    <!-- Scripts -->
-    <!-- Would be injected automatically -->
-    <script type="text/javascript" src="./dist/build.e124c824ded1afe2c6a4.min.js"></script>
-
-    <!-- EmailJS -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("");
-        })();
-    </script>
 </body>
 </html>
